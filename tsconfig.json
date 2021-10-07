@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
-    "jsx": "react"
+    "moduleResolution": "node",
+    "target": "es2021",
+    "strict": true,
+    "jsx": "react",
+    "isolatedModules": true
   }
 }

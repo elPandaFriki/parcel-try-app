@@ -1,10 +1,5 @@
 import * as React from "react";
-
-type MyProps = {};
-
-type MyState = {
-  count: number;
-};
+import { MyProps, MyState } from "./types";
 
 export default class App extends React.Component<MyProps, MyState> {
   state: MyState = {
