@@ -4,7 +4,9 @@
   "description": "",
   "source": "public/index.html",
   "scripts": {
-    "start": "parcel -p 3000 --lazy",
+    "production": "nodemon server.js",
+    "start": "yarn check_types && parcel -p 3000 --lazy --open chrome --config .parcelrc.json",
+    "serve": "parcel -p 4000 --lazy --open chrome serve",
     "clean_dist": "rm -rf dist/*",
     "build": "yarn check_types && yarn clean_dist && BUNDLE_BUDDY=true parcel build",
     "check_types": "tsc --noEmit"
@@ -22,6 +24,8 @@
     "@parcel/transformer-typescript-tsc": "^2.0.0-alpha.3",
     "@types/react": "^17.0.27",
     "@types/react-dom": "^17.0.9",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13",
     "parcel": "^2.0.0-rc.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
